@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function Footer() {
   
   const colorBG = { 
@@ -88,7 +90,7 @@ function Footer() {
               <br/>
               <p>Carrera 1 # 1 a 1 Bogotá, Colombia</p>
               <p>Teléfonos: 123 456 7890 - 601 123 456 - 01 8000 123 5489</p>
-              <p>Formulario web</p>
+              <a href="/contact">Contact</a>
             </div>
             <div className="p-2">
               <b>Sobre Nosotros: </b>

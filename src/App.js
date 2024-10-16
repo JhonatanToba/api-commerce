@@ -3,6 +3,9 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setApiData } from "./reducers";
 import PagPrincipal from "./components/PagPrincipal";
+import PagGaleria from "./components/PagGaleria";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import PagContacto from "./components/PagContacto";
 
 function App() {
 
@@ -35,9 +38,13 @@ function App() {
   
   return (
     <>
-    
-      <PagPrincipal info={ data }/>
-
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<PagPrincipal info={ data }/>}/>
+          <Route path="/gallery" element={<PagGaleria info={ data }/>}/>
+          <Route path="/contact" element={ <PagContacto/> } />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
